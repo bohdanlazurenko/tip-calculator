@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .input-container {
+    @apply relative;
+  }
+  
+  .input-icon {
+    @apply absolute left-4 top-1/2 transform -translate-y-1/2 text-grayish-cyan;
+  }
+  
+  .custom-input {
+    @apply w-full bg-very-light-grayish-cyan text-very-dark-cyan text-right text-2xl font-bold py-3 pr-4 pl-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-strong-cyan placeholder:text-grayish-cyan;
+  }
+  
+  .tip-button {
+    @apply bg-very-dark-cyan text-white py-3 px-4 rounded-lg text-xl font-bold hover:bg-strong-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-strong-cyan;
+  }
+  
+  .tip-button.active {
+    @apply bg-strong-cyan text-very-dark-cyan;
+  }
+  
+  .reset-button {
+    @apply w-full bg-strong-cyan text-very-dark-cyan py-3 rounded-lg text-xl font-bold hover:bg-opacity-75 transition-opacity focus:outline-none focus:ring-2 focus:ring-strong-cyan disabled:opacity-25 disabled:cursor-not-allowed;
+  }
+  
+  .result-amount {
+    @apply text-4xl font-bold text-strong-cyan;
+  }
+  
+  .result-label {
+    @apply text-sm text-grayish-cyan;
+  }
+  
+  .result-person {
+    @apply text-xs text-dark-grayish-cyan;
+  }
+}
